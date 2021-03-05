@@ -20,6 +20,7 @@ jobs:
       - run: uname -a
       - run: ./autogen.sh
       - run: ./configure
+      - run: make
       - run: make check
 workflows: 
   build:
