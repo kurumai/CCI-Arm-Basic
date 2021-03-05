@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: sudo apt-get install intltool
       - run: uname -a
-      - run: autogen.sh
+      - run: ./autogen.sh
       - run: ./configure
       - run: make check
   build-runner: 
@@ -18,7 +18,7 @@ jobs:
     steps: 
       - checkout
       - run: uname -a
-      - run: autogen.sh
+      - run: ./autogen.sh
       - run: ./configure
       - run: make check
 workflows: 
