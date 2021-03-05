@@ -8,18 +8,14 @@ jobs:
     steps: 
       - checkout
       - run: uname -a
-      - run: gcc -o hello_arm hello.c
-      - run: ./hello_arm
-      - run: file hello_arm
+      - run: make check
   build-runner: 
     machine: true
     resource_class: kurumai/arm-runner
     steps: 
       - checkout
       - run: uname -a
-      - run: gcc -o hello_arm hello.c
-      - run: ./hello_arm
-      - run: file hello_arm
+      - run: make check
 workflows: 
   build:
     jobs: 
