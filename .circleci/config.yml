@@ -24,6 +24,6 @@ jobs:
 workflows: 
   build:
     jobs: 
-      - build-medium
+      #- build-medium
       - build-runner
 
