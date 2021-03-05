@@ -7,7 +7,10 @@ jobs:
     resource_class: arm.medium
     steps: 
       - checkout
+      - run: sudo apt-get install intltool
       - run: uname -a
+      - run: autogen.sh
+      - run: ./configure
       - run: make check
   build-runner: 
     machine: true
@@ -15,6 +18,8 @@ jobs:
     steps: 
       - checkout
       - run: uname -a
+      - run: autogen.sh
+      - run: ./configure
       - run: make check
 workflows: 
   build:
